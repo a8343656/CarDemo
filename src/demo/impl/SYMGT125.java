@@ -1,10 +1,25 @@
 package demo.impl;
 
-import demo.base.AbstractGasMotorcycle;
+import demo.base.AbstractMotorclycle;
+import demo.base.Oil;
 
-public class SYMGT125 extends AbstractGasMotorcycle{
+
+
+public class SYMGT125 extends AbstractMotorclycle{
 	
-	final Integer engineDisplacement = 125;
+	public SYMGT125(String color,double drivenDistance, double energyLeft) {
+		super("SYM",		// 紅礟
+				"GT125",	// 腹
+				"key",		// 币笆よΑ 
+				color, 
+				new Oil(), 	//方
+				100, 		//程蔼硉
+				drivenDistance, 
+				10, 		//方程秖
+				energyLeft, 
+				0.1			//方秖
+				);
+	}
 	
 	@Override
 	public boolean isNeedMaintain(){
@@ -20,18 +35,5 @@ public class SYMGT125 extends AbstractGasMotorcycle{
 		System.out.println("SYM紅玂緄ЧΘ");
 		setMaintainDistance(0);
 	}
-	
-	public SYMGT125(String color,double drivenDistance,double energyLeft) {
-			this.brand = "SYM";
-			this.type = "GT125";
-			this.wheelAmount = 2;
-			this.color = color;
-			this.isStart = false;
-			this.speed = 100;
-			this.drivenDistance = drivenDistance;
-			this.maintainDistance = 0;
-			this.energyMax = 20;
-			this.energyLeft = energyLeft;
-			this.energyConsumption = 1;
-	}
+
 }

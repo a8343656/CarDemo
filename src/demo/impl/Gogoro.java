@@ -1,10 +1,24 @@
 package demo.impl;
 
-import demo.base.AbstarctElectricMotocycle;
+import demo.base.AbstractMotorclycle;
+import demo.base.Eletric;
+import demo.base.Oil;
 
-public class Gogoro extends AbstarctElectricMotocycle{
+public class Gogoro extends AbstractMotorclycle{
 	
-	final Integer engineDisplacement = 0;
+	public Gogoro(String color,double drivenDistance, double energyLeft) {
+		super(	"Gogoro",			// 紅礟
+				"Gogoro1",			// 腹
+				"Push Start",		// 币笆よΑ 
+				color, 
+				new Eletric(), 		//方
+				100, 				//程蔼硉
+				drivenDistance, 
+				10, 				//方程秖
+				energyLeft, 
+				0.1					//方秖
+				);
+	}
 	
 	@Override
 	public boolean isNeedMaintain(){
@@ -21,19 +35,6 @@ public class Gogoro extends AbstarctElectricMotocycle{
 		setMaintainDistance(0);
 	}
 	
-	public Gogoro(String color,double drivenDistance,double energyLeft) {
-			this.brand = "Gogoro";
-			this.startType = "keyLess";
-			this.type = "Gogoro1";
-			this.color = color;
-			this.wheelAmount = 2;
-			this.isStart = false;
-			this.speed = 100;
-			this.drivenDistance = drivenDistance;
-			this.maintainDistance = 0;
-			this.energyMax = 50;
-			this.energyLeft = energyLeft;
-			this.energyConsumption = 1;
-	}
+
 	
 }

@@ -1,10 +1,25 @@
 package demo.impl;
 
-import demo.base.AbstractElectricCar;
+import demo.base.AbstractCar;
+import demo.base.Eletric;
+import demo.base.Oil;
 
-public class TeslaModel3 extends AbstractElectricCar{
+public class TeslaModel3 extends AbstractCar{
 
-	final Integer engineDisplacement = 0;
+	
+	public TeslaModel3(String color,double drivenDistance, double energyLeft) {
+		super(	"Tesla",			// 紅礟
+				"Model3",			// 腹
+				"Push start",		// 币笆よΑ 
+				color, 
+				new Eletric(), 		//方
+				300, 				//程蔼硉
+				drivenDistance, 
+				100, 				//方程秖
+				energyLeft, 
+				1					//方秖
+				);
+	}
 	
 	public boolean isNeedMaintain(){
 		if(getMaintainDistance()>20000){
@@ -17,20 +32,6 @@ public class TeslaModel3 extends AbstractElectricCar{
 	public void maintain(){
 		System.out.println("疭吹┰紅玂緄ЧΘ");
 		setMaintainDistance(0);
-	}
-	
-	public TeslaModel3(String color,double drivenDistance,double energyLeft) {
-			this.brand = "Tesla";
-			this.type = "Model3";
-			this.wheelAmount = 4;
-			this.color = color;
-			this.isStart = false;
-			this.speed = 300;
-			this.drivenDistance = drivenDistance;
-			this.maintainDistance = 0;
-			this.energyMax = 100;
-			this.energyLeft = energyLeft;
-			this.energyConsumption = 0.5;
 	}
 
 }

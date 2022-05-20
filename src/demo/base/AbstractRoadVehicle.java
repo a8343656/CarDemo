@@ -2,18 +2,19 @@ package demo.base;
 
 public abstract class AbstractRoadVehicle implements ITransportation{
 	
-	protected String brand;
-	protected String type;
-	protected String color;
-	protected String startType;
-	protected Integer wheelAmount ;
-	protected boolean isStart;
-	protected Integer speed;
-	protected double drivenDistance;
-	protected double maintainDistance;
-	protected double energyMax;
-	protected double energyLeft;
-	protected double energyConsumption; 
+	private String brand;
+	private String type;
+	private String startType;
+	private String color;
+	private Energy Energy;
+	private boolean isStart;
+	private Integer speed;
+	private Integer wheelAmount ;
+	private double drivenDistance;
+	private double maintainDistance;
+	private double energyMax;
+	private double energyLeft;
+	private double energyConsumption; 
 	
 	
 
@@ -21,7 +22,38 @@ public abstract class AbstractRoadVehicle implements ITransportation{
 	public abstract void maintain();
 	public abstract void horn();
 	
-	public String getColer(){
+	public AbstractRoadVehicle(String brand, String type, String startType,String color,
+			Energy energy, 
+			Integer speed, Integer wheelAmount, 
+			double drivenDistance,
+			double energyMax, double energyLeft,double energyConsumption) {
+		
+		this.brand = brand;
+		this.type = type;
+		this.startType = startType;
+		this.color = color;
+		Energy = energy;
+		this.isStart = false;
+		this.speed = speed;
+		this.wheelAmount = wheelAmount;
+		this.drivenDistance = drivenDistance;
+		this.maintainDistance = 0;
+		this.energyMax = energyMax;
+		this.energyLeft = energyLeft;
+		this.energyConsumption = energyConsumption;
+	}
+	
+	@Override
+	public double showAllDistance(){
+		System.out.println("Á`¨½µ{"+this.drivenDistance);
+		return getDrivenDistance();
+	}
+	
+	public Energy getEnergy(){
+		return this.Energy;
+	}
+	
+ 	public String getColer(){
 		return this.color;
 	}
 	
@@ -43,6 +75,10 @@ public abstract class AbstractRoadVehicle implements ITransportation{
 	
 	public void setStart(boolean isStart) {
 		this.isStart = isStart;
+	}
+	
+	public String getStartType(){
+		return this.startType;
 	}
 	
 	public Integer getSpeed() {

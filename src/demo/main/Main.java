@@ -9,8 +9,8 @@ import demo.impl.TeslaModel3;
 
 
 public class Main {
-
 	public static void main(String[] args) {
+
 		Scanner inputReader = new Scanner(System.in);
 
 		System.out.println("請輸入車型");

@@ -1,9 +1,24 @@
 package demo.impl;
 
-import demo.base.AbstarctGasCar;
+import demo.base.AbstractCar;
+import demo.base.Oil;
 
-public class FordFiesta extends AbstarctGasCar{
+public class FordFiesta extends AbstractCar{
 	
+	public FordFiesta(String color,double drivenDistance, double energyLeft) {
+		super(	"Ford",			// 紅礟
+				"Fiesta",		// 腹
+				"key",			// 币笆よΑ 
+				color, 
+				new Oil(), 		//方
+				100, 			//程蔼硉
+				drivenDistance, 
+				50, 			//方程秖
+				energyLeft, 
+				0.1				//方秖
+				);
+	}
+
 	final Integer engineDisplacement = 1600;
 	
 	public boolean isNeedMaintain(){
@@ -19,21 +34,7 @@ public class FordFiesta extends AbstarctGasCar{
 		setMaintainDistance(0);
 	}
 
-	public FordFiesta(String color,double drivenDistance,double energyLeft) {
-			this.brand = "Ford";
-			this.startType = "key";
-			this.type = "Fiesta";
-			this.color = color;
-			this.wheelAmount = 4;
-			this.isStart = false;
-			this.speed = 150;
-			this.drivenDistance = drivenDistance;
-			this.maintainDistance = 0;
-			this.energyMax = 50;
-			this.energyLeft = energyLeft;
-			this.energyConsumption = 0.1;
-		
-	}
+
 	
 
 }
