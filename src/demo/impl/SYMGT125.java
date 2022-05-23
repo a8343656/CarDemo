@@ -15,7 +15,7 @@ public class SYMGT125 extends AbstractMotorclycle{
 				new Oil(), 	//方
 				100, 		//程蔼硉
 				drivenDistance, 
-				10, 		//方程秖
+				20, 		//方程秖
 				energyLeft, 
 				0.1			//方秖
 				);

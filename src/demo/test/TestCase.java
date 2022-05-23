@@ -78,7 +78,7 @@ public class TestCase {
 	
 	@Test
 	public void testIsEnergyEnough(){
-		boolean[] ansArr = {true,false,false,true};
+		boolean[] ansArr = {true,false,true,true};
 		
 		for(int i=0 ; i<vehicleList.size() ; i++){
 			Assert.assertEquals(ansArr[i],vehicleList.get(i).isEnergyEnough(25));
@@ -98,7 +98,7 @@ public class TestCase {
 	
 	@Test
 	public void testMove(){
-		double[] ansArr = { 0+25, 0, 500+10, 1000+25};
+		double[] ansArr = { 0+25, 0, 500+25, 1000+25};
 		
 		for(int i=0 ; i<vehicleList.size() ; i++){
 			vehicleList.get(i).start();

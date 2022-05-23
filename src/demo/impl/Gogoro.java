@@ -2,7 +2,6 @@ package demo.impl;
 
 import demo.base.AbstractMotorclycle;
 import demo.base.Eletric;
-import demo.base.Oil;
 
 public class Gogoro extends AbstractMotorclycle{
 	
@@ -14,7 +13,7 @@ public class Gogoro extends AbstractMotorclycle{
 				new Eletric(), 		//方
 				100, 				//程蔼硉
 				drivenDistance, 
-				10, 				//方程秖
+				50, 				//方程秖
 				energyLeft, 
 				0.1					//方秖
 				);
